@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".IndexActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3399dd"
+        android:padding="10dip"
+        android:text="我是首页"
+        android:textColor="#ffffff"
+        android:textSize="50dip" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:gravity="center_vertical"
+        android:text=">>内存泄露1:将Activity的Context对象传给静态对象，静态对象生命周期长，导致Activiyt无法释放" />
+
+    <TextView
+        android:id="@+id/tv_next_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dip"
+        android:text=">>内存泄露2:非静态内部类自动获得外部类的强引用，内部类如果进行耗时操作导致Activity无法释放" />
+
+    <TextView
+        android:id="@+id/tv_next_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dip"
+        android:text=">>内存泄露3:new一个Thread（匿名非静态内部内部类）做耗时操作，Activity退出内部无法释放" />
+
+    <TextView
+        android:id="@+id/tv_next_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dip"
+        android:text=">> Handler 里面的消息还没发送完毕的话，Activity 的内存也不会被回收" />
+</LinearLayout>
