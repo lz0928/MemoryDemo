@@ -2,7 +2,6 @@
 
     单例，非静态内部类(Thread,Handler等),集合等造成的内存泄露。还有下面的情况需要注意：
 
-    1.
 
     1.手动注册广播时，退出时忘记unregisterReceivere()
 
