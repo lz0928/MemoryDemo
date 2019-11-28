@@ -27,7 +27,8 @@ public class CollectionSample {
         }
     }
 
-    private void onDestory{
+    //清空集合对象，解决集合用完了对象还不能回收的问题。
+    private void onDestory(){
         objectList.clear();
         objectList = null;
     }
